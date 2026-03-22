@@ -26,22 +26,22 @@
 <h1>Teste de Acessibilidade</h1>
 
 <!-- pular níveis de heading -->
-<h4>Seção que pulou heading</h4>
+<h2>Seção que pulou heading</h2>
 
 <!-- imagem sem alt -->
-<img src="praia.jpg">
+<img src="praia.jpg" alt="Descrição da imagem da praia">
 
 <!-- imagem com alt vazio indevido -->
 <img src="carro.jpg" alt="">
 
 <!-- link vazio -->
-<a href="#"></a>
+<a href="#">Página inicial</a>
 
 <!-- link com texto ruim -->
-<a href="#">clique aqui</a>
+<button type="button" onclick="alert('clicou')">Enviar</button>
 
 <!-- botão sem texto -->
-<button></button>
+<button type="button" aria-label="Enviar formulário">Enviar</button>
 
 <!-- div usada como botão -->
 <div class="clickable" onclick="alert('clicou')">
@@ -56,7 +56,7 @@ Texto com contraste muito baixo
 <!-- formulário sem label -->
 <form>
 
-<input type="text" placeholder="Nome">
+<label for="nome">Nome</label><input type="text" id="nome" name="nome">
 
 <input type="email" placeholder="Email">
 
@@ -65,7 +65,7 @@ Texto com contraste muito baixo
 <button>Enviar</button>
 
 </form>
-
+<table><thead><tr><th scope="col">Nome</th><th scope="col">Idade</th></tr></thead><tbody>...</tbody></table>
 <br>
 
 <!-- tabela sem cabeçalho -->
@@ -89,10 +89,10 @@ Texto com contraste muito baixo
 <br>
 
 <!-- iframe sem title -->
-<iframe src="https://example.com"></iframe>
+<iframe src="https://example.com" title="Conteúdo externo sobre exemplo"></iframe>
 
 <br><br>
-
+<ul><li>Item 1</li><li>Item 2</li></ul>
 <!-- texto como imagem -->
 <img src="botao-comprar.png">
 
