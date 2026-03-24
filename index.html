@@ -26,22 +26,22 @@
 <h1>Teste de Acessibilidade</h1>
 
 <!-- pular níveis de heading -->
-<h4>Seção que pulou heading</h4>
+<h2>Seção que pulou heading</h2>
 
 <!-- imagem sem alt -->
-<img src="praia.jpg">
+<img src="praia.jpg" alt="Descrição da imagem da praia">
 
 <!-- imagem com alt vazio indevido -->
-<img src="carro.jpg" alt="">
+<img src="carro.jpg" alt="Descrição do carro">
 
-<!-- link vazio -->
-<a href="#"></a>
+<button type="button" class="clickable" onclick="alert('clicou')">Enviar</button>
+<a href="#">Link para página externa</a>
 
 <!-- link com texto ruim -->
-<a href="#">clique aqui</a>
+<a href="#">Saiba mais sobre acessibilidade</a>
 
-<!-- botão sem texto -->
-<button></button>
+<p style="color: #000; background-color: #fff;">Texto com contraste adequado</p>
+<button type="button">Enviar formulário</button>
 
 <!-- div usada como botão -->
 <div class="clickable" onclick="alert('clicou')">
@@ -56,11 +56,11 @@ Texto com contraste muito baixo
 <!-- formulário sem label -->
 <form>
 
-<input type="text" placeholder="Nome">
+<label for="nome">Nome</label><input type="text" id="nome">
 
-<input type="email" placeholder="Email">
+<table><thead><tr><th>Nome</th><th>Idade</th></tr></thead><tbody><tr><td>Murilo</td><td>25</td></tr></tbody></table>
 
-<input type="password" placeholder="Senha">
+<label for="senha">Senha</label><input type="password" id="senha">
 
 <button>Enviar</button>
 
@@ -85,16 +85,16 @@ Texto com contraste muito baixo
 <td>30</td>
 </tr>
 </table>
-
+<ul><li>Item 1</li><li>Item 2</li></ul>
 <br>
 
 <!-- iframe sem title -->
-<iframe src="https://example.com"></iframe>
+<iframe src="https://example.com" title="Conteúdo externo sobre exemplo"></iframe>
 
 <br><br>
 
 <!-- texto como imagem -->
-<img src="botao-comprar.png">
+<img src="botao-comprar.png" alt="Comprar agora">
 
 <!-- lista incorreta -->
 <ul>
@@ -103,7 +103,7 @@ Texto com contraste muito baixo
 </ul>
 
 <!-- campo obrigatório sem indicação -->
-<input type="text">
+<label for="campo-input">Campo de texto</label><input type="text" id="campo-input">
 
 </body>
 </html>
