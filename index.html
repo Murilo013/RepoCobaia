@@ -26,25 +26,25 @@
 <h1>Teste de Acessibilidade</h1>
 
 <!-- pular níveis de heading -->
-<h4>Seção que pulou heading</h4>
+<h3>Seção correta</h3>
 
 <!-- imagem sem alt -->
-<img src="praia.jpg">
+<img src="praia.jpg" alt="Foto de uma praia com areia e mar">
 
 <!-- imagem com alt vazio indevido -->
-<img src="carro.jpg" alt="">
+<img src="carro.jpg" alt="Foto de um carro esportivo vermelho">
 
 <!-- link vazio -->
-<a href="#"></a>
+<a href="#">Texto visível ou aria-label</a>
 
 <!-- link com texto ruim -->
-<a href="#">clique aqui</a>
+<a href="#">Saiba mais sobre nossos serviços</a>
 
 <!-- botão sem texto -->
-<button></button>
+<button type="button">Enviar</button>
 
 <!-- div usada como botão -->
-<div class="clickable" onclick="alert('clicou')">
+<button type="button" onclick="alert('clicou')">Enviar</button>
     Enviar
 </div>
 
@@ -56,11 +56,11 @@ Texto com contraste muito baixo
 <!-- formulário sem label -->
 <form>
 
-<input type="text" placeholder="Nome">
+<label for="nome">Nome</label><input type="text" id="nome">
 
-<input type="email" placeholder="Email">
+<label for="email">Email</label><input type="email" id="email">
 
-<input type="password" placeholder="Senha">
+<label for="senha">Senha</label><input type="password" id="senha">
 
 <button>Enviar</button>
 
@@ -94,7 +94,7 @@ Texto com contraste muito baixo
 <br><br>
 
 <!-- texto como imagem -->
-<img src="botao-comprar.png">
+<button aria-label="Comprar"><img src="botao-comprar.png" alt=""></button>
 
 <!-- lista incorreta -->
 <ul>
@@ -103,7 +103,7 @@ Texto com contraste muito baixo
 </ul>
 
 <!-- campo obrigatório sem indicação -->
-<input type="text">
+<label for="campo">Texto</label><input type="text" id="campo">
 
 </body>
 </html>
